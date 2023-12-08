@@ -7,17 +7,17 @@ function getComputerChoice(){
     let choiceNumber = Math.floor(Math.random() * 3 + 1);
     switch (choiceNumber) {
         case 1:
-            console.log(`Computer's Choice is ${choice1}.`);
+            console.log(`Computer's choice is ${choice1}.`);
             return choice1;
             break;
         
         case 2:
-            console.log(`Computer's Choice is ${choice2}.`);
+            console.log(`Computer's choice is ${choice2}.`);
             return choice2;
             break;
         
         case 3:
-            console.log(`Computer's Choice is ${choice3}.`);
+            console.log(`Computer's choice is ${choice3}.`);
             return choice3;
             break;
     
@@ -31,7 +31,7 @@ function getComputerChoice(){
     let firstLetter = playerChoice.charAt(0).toUpperCase();
     let otherLetters = playerChoice.slice(1).toLowerCase();
     let finalResult = firstLetter + otherLetters;
-    console.log(finalResult);
+    console.log("You have chosen: " + finalResult + ".");
     return finalResult;
 }
 
