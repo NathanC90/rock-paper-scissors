@@ -1,7 +1,7 @@
 # rock-paper-scissors
 
 December 08, 2023 -- Preliminary version.
-An implementation regarding 'rock paper scissors' from TOP (https://www.theodinproject.com/lessons/foundations-rock-paper-scissors "Project: Rock Paper Scissors").
+An implementation regarding 'rock paper scissors' from [TOP](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors "Project: Rock Paper Scissors").
 
 Currently there are three functions:
 
