@@ -5,19 +5,23 @@ let playerChoice = prompt("Please enter 'Rock', 'Paper', or 'Scissors.'");
 
 function getComputerChoice(){
     let choiceNumber = Math.floor(Math.random() * 3 + 1);
+    let computerChoice = document.createElement('div');
     switch (choiceNumber) {
         case 1:
-            console.log(`Computer's choice is ${choice1}.`);
+            computerChoice.innerHTML =`Computer's choice is ${choice1}.`;
+            document.body.appendChild(computerChoice);
             return choice1;
             break;
         
         case 2:
-            console.log(`Computer's choice is ${choice2}.`);
+            computerChoice.innerHTML =`Computer's choice is ${choice2}.`;
+            document.body.appendChild(computerChoice);
             return choice2;
             break;
         
         case 3:
-            console.log(`Computer's choice is ${choice3}.`);
+            computerChoice.innerHTML =`Computer's choice is ${choice3}.`;
+            document.body.appendChild(computerChoice);
             return choice3;
             break;
     
