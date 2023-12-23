@@ -36,23 +36,26 @@ function getComputerChoice(){
 }
 
 function compete(playerSelection, computerSelection) {
+    let result = document.createElement('div');
     if(playerSelection == 'Rock' && computerSelection == 'Paper') {
-        console.log("You lose! Paper beats Rock. Reload the page to play again.");
+        result.innerHTML = "You lose! Paper beats Rock. Reload the page to plage again.";
     } else if (playerSelection == 'Rock' && computerSelection == 'Scissors'){
-        console.log("You win! Rock beats Scissors. Reload the page to play again.");
+        result.innerHTML = "You win! Rock beats Scissors. Reload the page to play again.";
     } else if (playerSelection == 'Paper' && computerSelection == 'Rock') {
-        console.log("You win! Paper beats Rock. Reload the page to play again.");
+        result.innerHTML = "You win! Paper beats Rock. Reload the page to play again.";
     } else if (playerSelection == 'Paper' && computerSelection == 'Scissors') {
-        console.log("You lose! Scissors beat Paper. Reload the page to play again.");
+        result.innerHTML = "You lose! Scissors beat Paper. Reload the page to play again.";
     } else if (playerSelection == 'Scissors' && computerSelection == 'Rock') {
-        console.log("You lose! Rock beats Scissors. Reload the page to play again.");
+        result.innerHTML = "You lose! Rock beats Scissors. Reload the page to play again.";
     } else if (playerSelection == 'Scissors' && computerSelection == 'Paper') {
-        console.log("You win! Scissors beat Paper. Reload the page to play again.");
+        result.innerHTML = "You win! Scissors beat Paper. Reload the page to play again.";
     } else if (playerSelection == computerSelection) {
-        console.log("It's a tie!");
+        result.innerHTML = "It's a tie!";
     } else {
-        console.log("Invalid input. Please ensure you have entered 'Rock', 'Paper', or 'Scissors'. Reload the page to play again.");
+        result.innerHTML = "Invalid input. Please ensure you have entered 'Rock', 'Paper', or 'Scissors'. Reload the page to play again.";
     }
+
+    document.body.appendChild(result);
 }
 
 compete(getPlayerChoice(playerChoice), getComputerChoice());
