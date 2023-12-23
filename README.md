@@ -12,5 +12,6 @@ Currently there are three functions:
 There should be one more function to record scores.
 
 December 23, 2023 -- Updated version 1.0.1.
+
 Revisit to add simple UI.
 Use `branching` to make new changes without breaking what we already have.
