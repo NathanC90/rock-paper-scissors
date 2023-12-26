@@ -12,7 +12,7 @@ let playerEl = document.getElementById('player-choice');
 // Element to show computer's choices
 let computerEl = document.getElementById('computer-choice');
 
-// Elemnet to show the result
+// Element to show the result
 let result = document.getElementById('result');
 
 // Create a variable to store player's score;
@@ -84,6 +84,7 @@ function compete(playerChoice, computerSelection) {
     playerScoreEl.textContent = `Your score: ${playerScore}`;
     computerScoreEl.textContent = `Computer's score: ${computerScore}`;
 
+    // Disable buttons when one wins
     let allButtons = document.querySelectorAll('button');
     if(playerScore > computerScore && playerScore >= 5) {
         for (let i = 0; i < allButtons.length; i++){
