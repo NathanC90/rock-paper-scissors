@@ -16,6 +16,12 @@ let computer = document.createElement('p');
 // Elemnts to show the result
 let result = document.createElement('div');
 
+// Create a variable to store player's score;
+let playerScoreEl = document.getElementById("player-score");
+let computerScoreEl = document.getElementById("computer-score");
+let playerScore = 0;
+let computerScore = 0;
+
 
 function selectRock(){
     playerChoice = 'rock';
@@ -60,16 +66,28 @@ function getComputerChoice(){
 function compete(playerChoice, computerSelection) {
     if(playerChoice == 'rock' && computerSelection == 'paper') {
         result.textContent = "You lose! Paper beats Rock. Reload the page to plage again.";
+        computerScore++;
+        computerScoreEl.textContent = `Computer's score: ${computerScore}`;
     } else if (playerChoice == 'rock' && computerSelection == 'scissors'){
         result.textContent = "You win! Rock beats Scissors. Reload the page to play again.";
+        playerScore++;
+        playerScoreEl.textContent = `Your score: ${playerScore}`;
     } else if (playerChoice == 'paper' && computerSelection == 'rock') {
         result.textContent = "You win! Paper beats Rock. Reload the page to play again.";
+        playerScore++;
+        playerScoreEl.textContent = `Your score: ${playerScore}`;
     } else if (playerChoice == 'paper' && computerSelection == 'scissors') {
         result.textContent = "You lose! Scissors beat Paper. Reload the page to play again.";
+        computerScore++;
+        computerScoreEl.textContent = `Computer's score: ${computerScore}`;
     } else if (playerChoice == 'scissors' && computerSelection == 'rock') {
         result.textContent = "You lose! Rock beats Scissors. Reload the page to play again.";
+        computerScore++;
+        computerScoreEl.textContent = `Computer's score: ${computerScore}`;
     } else if (playerChoice == 'scissors' && computerSelection == 'paper') {
         result.textContent = "You win! Scissors beat Paper. Reload the page to play again.";
+        playerScore++;
+        playerScoreEl.textContent = `Your score: ${playerScore}`;
     } else if (playerChoice == computerSelection) {
         result.textContent = "It's a tie!";
     } else {
