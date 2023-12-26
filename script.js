@@ -60,32 +60,29 @@ function compete(playerChoice, computerSelection) {
     if(playerChoice == 'rock' && computerSelection == 'paper') {
         result.textContent = "You lose! Paper beats Rock.";
         computerScore++;
-        computerScoreEl.textContent = `Computer's score: ${computerScore}`;
     } else if (playerChoice == 'rock' && computerSelection == 'scissors'){
         result.textContent = "You win! Rock beats Scissors.";
         playerScore++;
-        playerScoreEl.textContent = `Your score: ${playerScore}`;
     } else if (playerChoice == 'paper' && computerSelection == 'rock') {
         result.textContent = "You win! Paper beats Rock.";
         playerScore++;
-        playerScoreEl.textContent = `Your score: ${playerScore}`;
     } else if (playerChoice == 'paper' && computerSelection == 'scissors') {
         result.textContent = "You lose! Scissors beat Paper.";
         computerScore++;
-        computerScoreEl.textContent = `Computer's score: ${computerScore}`;
     } else if (playerChoice == 'scissors' && computerSelection == 'rock') {
         result.textContent = "You lose! Rock beats Scissors.";
         computerScore++;
-        computerScoreEl.textContent = `Computer's score: ${computerScore}`;
     } else if (playerChoice == 'scissors' && computerSelection == 'paper') {
         result.textContent = "You win! Scissors beat Paper.";
         playerScore++;
-        playerScoreEl.textContent = `Your score: ${playerScore}`;
     } else if (playerChoice == computerSelection) {
         result.textContent = "It's a tie!";
     } else {
         result.textContent = "Invalid input. Please ensure you have entered 'Rock', 'Paper', or 'Scissors'.";
     }
+
+    playerScoreEl.textContent = `Your score: ${playerScore}`;
+    computerScoreEl.textContent = `Computer's score: ${computerScore}`;
 
     let allButtons = document.querySelectorAll('button');
     if(playerScore > computerScore && playerScore >= 5) {
