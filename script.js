@@ -58,33 +58,33 @@ function getComputerChoice(){
 
 function compete(playerChoice, computerSelection) {
     if(playerChoice == 'rock' && computerSelection == 'paper') {
-        result.textContent = "You lose! Paper beats Rock. Reload the page to plage again.";
+        result.textContent = "You lose! Paper beats Rock.";
         computerScore++;
         computerScoreEl.textContent = `Computer's score: ${computerScore}`;
     } else if (playerChoice == 'rock' && computerSelection == 'scissors'){
-        result.textContent = "You win! Rock beats Scissors. Reload the page to play again.";
+        result.textContent = "You win! Rock beats Scissors.";
         playerScore++;
         playerScoreEl.textContent = `Your score: ${playerScore}`;
     } else if (playerChoice == 'paper' && computerSelection == 'rock') {
-        result.textContent = "You win! Paper beats Rock. Reload the page to play again.";
+        result.textContent = "You win! Paper beats Rock.";
         playerScore++;
         playerScoreEl.textContent = `Your score: ${playerScore}`;
     } else if (playerChoice == 'paper' && computerSelection == 'scissors') {
-        result.textContent = "You lose! Scissors beat Paper. Reload the page to play again.";
+        result.textContent = "You lose! Scissors beat Paper.";
         computerScore++;
         computerScoreEl.textContent = `Computer's score: ${computerScore}`;
     } else if (playerChoice == 'scissors' && computerSelection == 'rock') {
-        result.textContent = "You lose! Rock beats Scissors. Reload the page to play again.";
+        result.textContent = "You lose! Rock beats Scissors.";
         computerScore++;
         computerScoreEl.textContent = `Computer's score: ${computerScore}`;
     } else if (playerChoice == 'scissors' && computerSelection == 'paper') {
-        result.textContent = "You win! Scissors beat Paper. Reload the page to play again.";
+        result.textContent = "You win! Scissors beat Paper.";
         playerScore++;
         playerScoreEl.textContent = `Your score: ${playerScore}`;
     } else if (playerChoice == computerSelection) {
         result.textContent = "It's a tie!";
     } else {
-        result.textContent = "Invalid input. Please ensure you have entered 'Rock', 'Paper', or 'Scissors'. Reload the page to play again.";
+        result.textContent = "Invalid input. Please ensure you have entered 'Rock', 'Paper', or 'Scissors'.";
     }
 
 }
