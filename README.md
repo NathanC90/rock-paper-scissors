@@ -15,3 +15,8 @@ December 23, 2023 -- Updated version 1.0.1.
 
 Revisit to add simple UI.
 Use `branching` to make new changes without breaking what we already have.
+
+December 26, 2023 -- Updated version 1.0.2
+
+Updated functions in JS and added styles so that this page now have simple UI.
+Merged the branch with the origin and then removed the branch after confirmation.
