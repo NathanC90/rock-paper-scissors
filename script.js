@@ -87,4 +87,11 @@ function compete(playerChoice, computerSelection) {
         result.textContent = "Invalid input. Please ensure you have entered 'Rock', 'Paper', or 'Scissors'.";
     }
 
+    if(playerScore > computerScore && playerScore >= 5) {
+        console.log('You win!');
+    } else if (computerScore > playerScore && computerScore >= 5) {
+        console.log('Computer wins');
+    }
+
 }
+
