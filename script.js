@@ -42,51 +42,39 @@ function selectScissors(){
 
 function getComputerChoice(){
     let choiceNumber = Math.floor(Math.random() * 3 + 1);
-    let computerChoice = document.createElement('div');
-    switch (choiceNumber) {
-        case 1:
-            computerChoice.innerHTML =`Computer's choice is ${choice1}.`;
-            result.appendChild(computerChoice);
-            return choice1;
-            break;
-        
-        case 2:
-            computerChoice.innerHTML =`Computer's choice is ${choice2}.`;
-            document.body.appendChild(computerChoice);
-            return choice2;
-            break;
-        
-        case 3:
-            computerChoice.innerHTML =`Computer's choice is ${choice3}.`;
-            document.body.appendChild(computerChoice);
-            return choice3;
-            break;
-    
-        default:
-            console.log("");
-            break;
-    }
+    if (choiceNumber == 1) {
+        computer.textContent = `Computer has selected ${choice1}`;
+        divEl.appendChild(computer);
+        return choice1;
+    } else if (choiceNumber == 2) {
+        computer.textContent = `Computer has selected ${choice2}`;
+        divEl.appendChild(computer);
+        return choice2;
+    } else {
+        computer.textContent = `Computer has selected ${choice3}`;
+        divEl.appendChild(computer);
+        return choice3;
+    } 
 }
 
 function compete(playerChoice, computerSelection) {
-    let result = document.createElement('div');
     if(playerChoice == 'rock' && computerSelection == 'paper') {
-        result.innerHTML = "You lose! Paper beats Rock. Reload the page to plage again.";
+        result.textContent = "You lose! Paper beats Rock. Reload the page to plage again.";
     } else if (playerChoice == 'rock' && computerSelection == 'scissors'){
-        result.innerHTML = "You win! Rock beats Scissors. Reload the page to play again.";
+        result.textContent = "You win! Rock beats Scissors. Reload the page to play again.";
     } else if (playerChoice == 'paper' && computerSelection == 'rock') {
-        result.innerHTML = "You win! Paper beats Rock. Reload the page to play again.";
+        result.textContent = "You win! Paper beats Rock. Reload the page to play again.";
     } else if (playerChoice == 'paper' && computerSelection == 'scissors') {
-        result.innerHTML = "You lose! Scissors beat Paper. Reload the page to play again.";
+        result.textContent = "You lose! Scissors beat Paper. Reload the page to play again.";
     } else if (playerChoice == 'scissors' && computerSelection == 'rock') {
-        result.innerHTML = "You lose! Rock beats Scissors. Reload the page to play again.";
+        result.textContent = "You lose! Rock beats Scissors. Reload the page to play again.";
     } else if (playerChoice == 'scissors' && computerSelection == 'paper') {
-        result.innerHTML = "You win! Scissors beat Paper. Reload the page to play again.";
+        result.textContent = "You win! Scissors beat Paper. Reload the page to play again.";
     } else if (playerChoice == computerSelection) {
-        result.innerHTML = "It's a tie!";
+        result.textContent = "It's a tie!";
     } else {
-        result.innerHTML = "Invalid input. Please ensure you have entered 'Rock', 'Paper', or 'Scissors'. Reload the page to play again.";
+        result.textContent = "Invalid input. Please ensure you have entered 'Rock', 'Paper', or 'Scissors'. Reload the page to play again.";
     }
 
-    document.body.appendChild(result);
+    divEl.appendChild(result);
 }
