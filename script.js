@@ -1,10 +1,21 @@
+// Computer's choices
 let choice1 = 'rock';
 let choice2 = 'paper';
 let choice3 = 'scissors';
+
+// Player's choice
 let playerChoice;
+
+// Elements to show the player's choices
 let player = document.createElement('p');
 let divEl = document.querySelector('.container');
+
+// Elements to show computer's choices
 let computer = document.createElement('p');
+
+// Elemnts to show the result
+let result = document.createElement('div');
+
 
 function selectRock(){
     playerChoice = 'rock';
@@ -35,7 +46,7 @@ function getComputerChoice(){
     switch (choiceNumber) {
         case 1:
             computerChoice.innerHTML =`Computer's choice is ${choice1}.`;
-            computer.appendChild(computerChoice);
+            result.appendChild(computerChoice);
             return choice1;
             break;
         
