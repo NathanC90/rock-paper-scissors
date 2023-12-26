@@ -1,7 +1,33 @@
-let choice1 = 'Rock';
-let choice2 = 'Paper';
-let choice3 = 'Scissors';
-let playerChoice = prompt("Please enter 'Rock', 'Paper', or 'Scissors.'");
+let choice1 = 'rock';
+let choice2 = 'paper';
+let choice3 = 'scissors';
+let playerChoice;
+let player = document.createElement('p');
+let divEl = document.querySelector('.container');
+let computer = document.createElement('p');
+
+function selectRock(){
+    playerChoice = 'rock';
+    compete(playerChoice, getComputerChoice());
+    player.innerHTML = `You have selected ${playerChoice}`;
+    divEl.appendChild(player);
+}
+
+function selectPaper(){
+    playerChoice = 'paper';
+    compete(playerChoice, getComputerChoice());
+    player.innerHTML = `You have selected ${playerChoice}`;
+    divEl.appendChild(player);
+}
+
+function selectScissors(){
+    playerChoice = 'scissors';
+    compete(playerChoice, getComputerChoice());
+    player.innerHTML = `You have selected ${playerChoice}`;
+    divEl.appendChild(player);
+}
+
+
 
 function getComputerChoice(){
     let choiceNumber = Math.floor(Math.random() * 3 + 1);
@@ -9,7 +35,7 @@ function getComputerChoice(){
     switch (choiceNumber) {
         case 1:
             computerChoice.innerHTML =`Computer's choice is ${choice1}.`;
-            document.body.appendChild(computerChoice);
+            computer.appendChild(computerChoice);
             return choice1;
             break;
         
@@ -31,29 +57,21 @@ function getComputerChoice(){
     }
 }
 
- function getPlayerChoice(playerChoice){
-    let firstLetter = playerChoice.charAt(0).toUpperCase();
-    let otherLetters = playerChoice.slice(1).toLowerCase();
-    let finalResult = firstLetter + otherLetters;
-    console.log("You have chosen: " + finalResult + ".");
-    return finalResult;
-}
-
-function compete(playerSelection, computerSelection) {
+function compete(playerChoice, computerSelection) {
     let result = document.createElement('div');
-    if(playerSelection == 'Rock' && computerSelection == 'Paper') {
+    if(playerChoice == 'rock' && computerSelection == 'paper') {
         result.innerHTML = "You lose! Paper beats Rock. Reload the page to plage again.";
-    } else if (playerSelection == 'Rock' && computerSelection == 'Scissors'){
+    } else if (playerChoice == 'rock' && computerSelection == 'scissors'){
         result.innerHTML = "You win! Rock beats Scissors. Reload the page to play again.";
-    } else if (playerSelection == 'Paper' && computerSelection == 'Rock') {
+    } else if (playerChoice == 'paper' && computerSelection == 'rock') {
         result.innerHTML = "You win! Paper beats Rock. Reload the page to play again.";
-    } else if (playerSelection == 'Paper' && computerSelection == 'Scissors') {
+    } else if (playerChoice == 'paper' && computerSelection == 'scissors') {
         result.innerHTML = "You lose! Scissors beat Paper. Reload the page to play again.";
-    } else if (playerSelection == 'Scissors' && computerSelection == 'Rock') {
+    } else if (playerChoice == 'scissors' && computerSelection == 'rock') {
         result.innerHTML = "You lose! Rock beats Scissors. Reload the page to play again.";
-    } else if (playerSelection == 'Scissors' && computerSelection == 'Paper') {
+    } else if (playerChoice == 'scissors' && computerSelection == 'paper') {
         result.innerHTML = "You win! Scissors beat Paper. Reload the page to play again.";
-    } else if (playerSelection == computerSelection) {
+    } else if (playerChoice == computerSelection) {
         result.innerHTML = "It's a tie!";
     } else {
         result.innerHTML = "Invalid input. Please ensure you have entered 'Rock', 'Paper', or 'Scissors'. Reload the page to play again.";
@@ -61,5 +79,3 @@ function compete(playerSelection, computerSelection) {
 
     document.body.appendChild(result);
 }
-
-compete(getPlayerChoice(playerChoice), getComputerChoice());
