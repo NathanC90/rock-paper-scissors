@@ -7,14 +7,13 @@ let choice3 = 'scissors';
 let playerChoice;
 
 // Elements to show the player's choices
-let player = document.createElement('p');
-let divEl = document.querySelector('.container');
+let playerEl = document.getElementById('player-choice');
 
 // Elements to show computer's choices
-let computer = document.createElement('p');
+let computerEl = document.getElementById('computer-choice');
 
 // Elemnts to show the result
-let result = document.createElement('div');
+let result = document.getElementById('result');
 
 // Create a variable to store player's score;
 let playerScoreEl = document.getElementById("player-score");
@@ -26,22 +25,19 @@ let computerScore = 0;
 function selectRock(){
     playerChoice = 'rock';
     compete(playerChoice, getComputerChoice());
-    player.innerHTML = `You have selected ${playerChoice}`;
-    divEl.appendChild(player);
+    playerEl.textContent = `You have selected ${playerChoice}`;
 }
 
 function selectPaper(){
     playerChoice = 'paper';
     compete(playerChoice, getComputerChoice());
-    player.innerHTML = `You have selected ${playerChoice}`;
-    divEl.appendChild(player);
+    playerEl.textContent = `You have selected ${playerChoice}`;
 }
 
 function selectScissors(){
     playerChoice = 'scissors';
     compete(playerChoice, getComputerChoice());
-    player.innerHTML = `You have selected ${playerChoice}`;
-    divEl.appendChild(player);
+    playerEl.textContent = `You have selected ${playerChoice}`;
 }
 
 
@@ -49,16 +45,13 @@ function selectScissors(){
 function getComputerChoice(){
     let choiceNumber = Math.floor(Math.random() * 3 + 1);
     if (choiceNumber == 1) {
-        computer.textContent = `Computer has selected ${choice1}`;
-        divEl.appendChild(computer);
+        computerEl.textContent = `Computer has selected ${choice1}`;
         return choice1;
     } else if (choiceNumber == 2) {
-        computer.textContent = `Computer has selected ${choice2}`;
-        divEl.appendChild(computer);
+        computerEl.textContent = `Computer has selected ${choice2}`;
         return choice2;
     } else {
-        computer.textContent = `Computer has selected ${choice3}`;
-        divEl.appendChild(computer);
+        computerEl.textContent = `Computer has selected ${choice3}`;
         return choice3;
     } 
 }
@@ -94,5 +87,4 @@ function compete(playerChoice, computerSelection) {
         result.textContent = "Invalid input. Please ensure you have entered 'Rock', 'Paper', or 'Scissors'. Reload the page to play again.";
     }
 
-    divEl.appendChild(result);
 }
