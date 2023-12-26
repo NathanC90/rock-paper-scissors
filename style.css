@@ -116,3 +116,14 @@ button {
         align-items: center;
     }
 }
+
+@media only screen and (max-width: 472px) {
+    .score-section {
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .choice-section {
+        font-size: 16px;
+    }
+}
