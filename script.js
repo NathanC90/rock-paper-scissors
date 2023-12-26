@@ -87,10 +87,17 @@ function compete(playerChoice, computerSelection) {
         result.textContent = "Invalid input. Please ensure you have entered 'Rock', 'Paper', or 'Scissors'.";
     }
 
+    let allButtons = document.querySelectorAll('button');
     if(playerScore > computerScore && playerScore >= 5) {
-        console.log('You win!');
+        for (let i = 0; i < allButtons.length; i++){
+            allButtons[i].disabled = true;
+        }
+        result.textContent = `🥳 You are the winner! Reload the page to play again.`;
     } else if (computerScore > playerScore && computerScore >= 5) {
-        console.log('Computer wins');
+        for (let i = 0; i < allButtons.length; i++){
+            allButtons[i].disabled = true;
+        }
+        result.textContent = `😵 Computer wins the game! Reload the page to play again.`;
     }
 
 }
