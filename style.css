@@ -3,3 +3,25 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     color:azure;
 }
+
+.container {
+    border: 1px solid white;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.score-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.choice-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+#result {
+    text-align: center;
+}
