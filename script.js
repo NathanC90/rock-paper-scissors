@@ -6,13 +6,13 @@ let choice3 = 'scissors';
 // Player's choice
 let playerChoice;
 
-// Elements to show the player's choices
+// Element to show the player's choices
 let playerEl = document.getElementById('player-choice');
 
-// Elements to show computer's choices
+// Element to show computer's choices
 let computerEl = document.getElementById('computer-choice');
 
-// Elemnts to show the result
+// Elemnet to show the result
 let result = document.getElementById('result');
 
 // Create a variable to store player's score;
