@@ -20,3 +20,5 @@ December 26, 2023 -- Updated version 1.0.2
 
 Updated functions in JS and added styles so that this page now have simple UI (according to [this page](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH)).
 Merged the branch with the origin and then removed the branch after confirmation.
+
+Live Demo: [Here](https://nathanc90.github.io/rock-paper-scissors/)
